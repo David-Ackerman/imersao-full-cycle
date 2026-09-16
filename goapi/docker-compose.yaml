@@ -7,8 +7,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: imersaoFullCycle
-      MYSQL_PASSWORD: root
     ports:
       - 3306:3306
     volumes:
       - .docker/mysql:/var/lib/mysql
+      - ./db.sql:/docker-entrypoint-initdb.d/db.sql
